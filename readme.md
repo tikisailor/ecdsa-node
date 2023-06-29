@@ -29,3 +29,8 @@ The server folder contains a node.js server using [express](https://expressjs.co
 The application should connect to the default server port (3042) automatically! 
 
 _Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` to automatically restart the server on any changes.
+
+### How to use solution
+run `node server/scripts/generateKey.js` to generate some pubic private key pairs (like in the video instructions) - or use the provided example keys.    
+run `node server/scripts/signMessage.js` to sign a transaction. You can modify the amount, sender and receiver.    
+On the front end, provide the same sender, receiver, amount as in your signed message, along with the signature to make a transfer. If there is a mismatch, signature is invalid and the transaction will be rejected.
